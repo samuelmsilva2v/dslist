@@ -1,6 +1,7 @@
 package com.devsuperior.dto;
 
 import com.devsuperior.entities.Game;
+import com.devsuperior.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -11,7 +12,6 @@ public class GameMinDTO {
 	private String shortDescription;
 
 	public GameMinDTO() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public GameMinDTO(Game entity) {
@@ -20,6 +20,14 @@ public class GameMinDTO {
 		year = entity.getYear();
 		imgUrl = entity.getImgUrl();
 		shortDescription = entity.getShortDescription();
+	}
+	
+	public GameMinDTO(GameMinProjection projection) {
+		id = projection.getId();
+		title = projection.getTitle();
+		year = projection.getYear();
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescription();
 	}
 
 	public Long getId() {

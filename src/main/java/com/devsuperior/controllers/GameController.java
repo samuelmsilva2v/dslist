@@ -25,7 +25,7 @@ public class GameController {
 	}
 	
 	@GetMapping(value = "/{id}")
-	public GameDTO findAll(@PathVariable Long id) {
+	public GameDTO findById(@PathVariable Long id) {
 		return gameService.findById(id);
 	}
 }
