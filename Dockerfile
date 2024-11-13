@@ -20,7 +20,7 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 
 # Copia o JAR construído na fase anterior
-COPY --from=build /app/target/dslist.jar app.jar
+COPY --from=build /app/target/dslist-0.0.1-SNAPSHOT.jar app.jar
 
 # Expõe a porta da aplicação (substitua pela porta que sua aplicação usa)
 EXPOSE 8080
